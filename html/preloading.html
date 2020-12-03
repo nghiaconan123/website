@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+	html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url( ../img/caobaquat_gif 2.gif) no-repeat 100% 100%;
+    background-size: cover;
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: visible;
+    background: #fff url(' ../img/caobaquat_gif 2.gif') no-repeat center center;
+}
+
+h1 {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: poppins;
+}
+		</style>
+</head>
+
+<body>
+	
+<div id="loader"></div>
+    <div id="content">
+        <h1>WELCOME TO MY WEBSITE</h1>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse orci eros, ornare vel consectetur vel, vehicula at tellus. Donec ac lectus dolor. Aenean euismod, ipsum a consectetur vehicula, leo felis tincidunt sem, et iaculis lorem felis at risus. Nulla quis tortor sagittis, malesuada enim non, vestibulum sem. In finibus vehicula libero, et sagittis eros sollicitudin quis. Etiam at arcu a diam rutrum condimentum. Praesent sapien felis, vestibulum dictum ex vel, fermentum gravida urna. Sed vitae varius sapien. Quisque posuere nisl quis rhoncus dapibus. Sed ultricies hendrerit nunc, nec pretium ligula tincidunt ac. Duis tempor orci odio, vestibulum vestibulum nisi lacinia a. Nunc a lacus id nisi elementum suscipit. Cras iaculis lacus nisi, sit amet molestie sapien tempor sit amet. Aliquam dictum quis metus non sagittis. Etiam vestibulum, mauris eget faucibus tempor, ex quam placerat ipsum, nec scelerisque odio turpis at lacus. Praesent luctus leo sit amet metus rutrum volutpat at eu nibh.
+
+Vestibulum condimentum, orci quis tincidunt mollis, erat nunc laoreet lectus, in lacinia lectus ex a magna. Nam ullamcorper ac tellus vel ultrices. Aenean tempus, libero quis gravida porta, arcu dui placerat justo, sit amet fermentum mauris enim a nisi. Curabitur varius orci egestas libero consectetur placerat. Duis eget aliquam arcu, a lacinia quam. Aliquam vitae ex nec sapien auctor tempus. Nulla facilisi. Nullam at ornare metus, sed sollicitudin ex. Curabitur fringilla est nec lacus blandit sodales.
+
+Praesent dolor urna, cursus hendrerit facilisis sit amet, congue non nisi. Maecenas tincidunt, erat ut ornare ultricies, purus purus venenatis tellus, a dictum nibh massa nec ante. Phasellus non viverra magna. Curabitur a neque turpis. Suspendisse dictum ex sit amet neque luctus auctor. Sed sit amet quam auctor, sollicitudin mauris eget, rutrum ipsum. Donec luctus, ligula quis commodo vehicula, lacus arcu fermentum urna, vel maximus nulla ex dictum metus. Duis scelerisque dapibus nunc, sit amet lacinia justo aliquam ac. Sed id massa at quam posuere sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis ipsum ut nunc mollis, tristique mollis orci posuere. In pellentesque accumsan risus non vehicula. Donec nisi ligula, ultrices id pellentesque a, lobortis eu libero. Suspendisse vitae accumsan dolor. Aenean at dictum mi. Etiam eros est, egestas at erat in, pretium porttitor lacus.
+
+Maecenas lacinia consectetur sapien, quis imperdiet orci placerat eu. Sed aliquet tempus accumsan. Sed in faucibus nunc, non placerat ligula. Integer sollicitudin erat pharetra luctus lobortis. Aenean sed accumsan tellus, id tincidunt elit. Donec quis laoreet enim. Maecenas imperdiet fermentum maximus. Fusce consectetur leo eget urna lacinia placerat. Donec lobortis at ex porta lobortis. Quisque placerat interdum vehicula. </p>
+    </div>
+  
+	
+	
+	
+	
+	
+	
+	<script>
+	var loader;
+
+function loadNow(opacity) {
+    if (opacity <= 0) {
+        displayContent();
+    } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function() {
+            loadNow(opacity - 0.05);
+        }, 50);
+    }
+}
+
+function displayContent() {
+    loader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loader = document.getElementById('loader');
+    loadNow(1);
+});
+	
+	</script>
+</body>
+</html>
